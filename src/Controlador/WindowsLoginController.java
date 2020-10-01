@@ -35,6 +35,7 @@ public class WindowsLoginController implements Initializable {
          TextField Null = null;
         
            Ingreso=Null;
+           System.out.println("si funciona");
      }
      public void salir(ActionEvent actionEvent){
            JOptionPane.showMessageDialog(null, "Gracias por Utilizar Nuestra App");
