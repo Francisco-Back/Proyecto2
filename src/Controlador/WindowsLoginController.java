@@ -32,8 +32,9 @@ public class WindowsLoginController implements Initializable {
      public void ValidarIngreso(ActionEvent actionEvent ){
          
              JOptionPane.showMessageDialog(null, "si funciona el ingreso si todo funciona bien");
+         TextField Null = null;
         
-         
+           Ingreso=Null;
      }
      public void salir(ActionEvent actionEvent){
            JOptionPane.showMessageDialog(null, "Gracias por Utilizar Nuestra App");
