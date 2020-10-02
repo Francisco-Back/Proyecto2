@@ -12,7 +12,7 @@ package Clases;
 public class Cliente {
 
     private int IdCliente;
-    private String Cliente;
+    private String NombreCliente;
     private String Codigo;
     private String Empresa;
     private String Funcion;
@@ -20,34 +20,28 @@ public class Cliente {
     public static int sigIdCliente(int IdCliente) {
 
         return IdCliente + 1;
-    }
-
-    public Cliente() {
 
     }
 
-    public Cliente(int IdCliente, String Cliente, String Codigo, String Empresa, String Funcion) {
+    public Cliente(int IdCliente) {
         this.IdCliente = IdCliente;
-        this.Cliente = Cliente;
+    }
+
+    public Cliente(int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
+        Cliente.sigIdCliente(IdCliente);
+        this.NombreCliente = NombreCliente;
         this.Codigo = Codigo;
         this.Empresa = Empresa;
         this.Funcion = Funcion;
     }
 
-    public int getIdCliente() {
-        return IdCliente;
-    }
-
-    public void setIdCliente(int IdCliente) {
-        this.IdCliente = IdCliente;
-    }
-
+ 
     public String getCliente() {
-        return Cliente;
+        return NombreCliente;
     }
 
     public void setCliente(String Cliente) {
-        this.Cliente = Cliente;
+        this.NombreCliente = Cliente;
     }
 
     public String getCodigo() {
@@ -76,8 +70,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "IdCliente=" + IdCliente + ", Cliente=" + Cliente + ", Codigo=" + Codigo + ", Empresa=" + Empresa + ", Funcion=" + Funcion + '}';
+        return "Cliente{" + "IdCliente=" + IdCliente + ", Cliente=" + NombreCliente + ", Codigo=" + Codigo + ", Empresa=" + Empresa + ", Funcion=" + Funcion + '}';
     }
 
-   
 }
