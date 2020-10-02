@@ -5,10 +5,10 @@
  */
 package Controlador;
 
-import static java.lang.System.exit;
 import java.net.URL;
 import java.util.ResourceBundle;
-import static javafx.application.Platform.exit;
+import javafx.beans.property.ObjectProperty;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,8 +16,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javax.swing.JOptionPane;
-import static jdk.nashorn.internal.objects.Global.exit;
-
 
 /**
  * FXML Controller class
@@ -26,31 +24,32 @@ import static jdk.nashorn.internal.objects.Global.exit;
  */
 public class WindowsLoginController implements Initializable {
 
-     public TextField Ingreso;
-     public PasswordField password;
-     
-     public void ValidarIngreso(ActionEvent actionEvent ){
-         
-             JOptionPane.showMessageDialog(null, "si funciona el ingreso si todo funciona bien");
-         TextField Null = null;
+
+    public PasswordField txtpassword;
+    public TextField txtUsuario;
+
+    public void ValidarIngreso(ActionEvent actionEvent) {
         
-           Ingreso=Null;
-           System.out.println("si funciona");
-          System.out.println("si funciona");
-     }
-     public void salir(ActionEvent actionEvent){
-           JOptionPane.showMessageDialog(null, "Gracias por Utilizar Nuestra App");
-         System.exit(0);
-     }
-      @Override
-    public void initialize(URL url, ResourceBundle rb) {
-     
-    }   
-          @FXML
-    private Label label;
-    
-     }
-     
-     
+       if(txtUsuario.getText().equals("francisco") && txtpassword.getText().equals("123")) {
+           JOptionPane.showMessageDialog(null, "Usuario correcto", "Ingreso", JOptionPane.INFORMATION_MESSAGE);
+       }else{
+           JOptionPane.showMessageDialog(null, "Usuario incorrecto", "error", JOptionPane.ERROR_MESSAGE);
+       }
+       
+            
+            }
+
     
 
+    public void salir(ActionEvent actionEvent) {
+        JOptionPane.showMessageDialog(null, "Gracias por Utilizar Nuestra App");
+        System.exit(0);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+      }
+
+   
+
+}
