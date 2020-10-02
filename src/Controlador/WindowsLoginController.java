@@ -34,6 +34,8 @@ public class WindowsLoginController implements Initializable {
            JOptionPane.showMessageDialog(null, "Usuario correcto", "Ingreso", JOptionPane.INFORMATION_MESSAGE);
        }else{
            JOptionPane.showMessageDialog(null, "Usuario incorrecto", "error", JOptionPane.ERROR_MESSAGE);
+           txtpassword.setText("");
+           txtUsuario.setText("");
        }
        
             
