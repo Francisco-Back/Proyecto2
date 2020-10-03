@@ -11,24 +11,25 @@ package Clases;
  */
 public class Cliente {
 
-    private int IdCliente;
+    private int IdCliente=3;
     private String NombreCliente;
     private String Codigo;
     private String Empresa;
     private String Funcion;
+   
 
     public static int sigIdCliente(int IdCliente) {
-
-        return IdCliente + 1;
-
+    
+         return IdCliente + 1;
     }
 
     public Cliente(int IdCliente) {
+       Cliente.sigIdCliente(IdCliente);
         this.IdCliente = IdCliente;
     }
 
     public Cliente(int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
-        Cliente.sigIdCliente(IdCliente);
+        this(IdCliente);
         this.NombreCliente = NombreCliente;
         this.Codigo = Codigo;
         this.Empresa = Empresa;
@@ -70,7 +71,11 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "IdCliente=" + IdCliente + ", Cliente=" + NombreCliente + ", Codigo=" + Codigo + ", Empresa=" + Empresa + ", Funcion=" + Funcion + '}';
+        Utileria utileria=new Utileria();
+        return "["+ utileria.getNombreClase(this)+"]" + "IdCliente=" + IdCliente + ", NombreCliente=" + NombreCliente + ", Codigo=" + Codigo + ", Empresa=" + Empresa + ", Funcion=" + Funcion;
     }
+
+    
+
 
 }
