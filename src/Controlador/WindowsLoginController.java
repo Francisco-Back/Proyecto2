@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Global.VentanaNew;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -34,22 +35,13 @@ public class WindowsLoginController implements Initializable {
     public TextField txtUsuario;
 
     public void ValidarIngreso(ActionEvent actionEvent)  {
-        
+        // validamos ingreso usuario
        if(txtUsuario.getText().equals("francisco") && txtpassword.getText().equals("123")) {
            JOptionPane.showMessageDialog(null, "Usuario correcto", "Ingreso", JOptionPane.INFORMATION_MESSAGE);
-             FXMLLoader loader=new FXMLLoader();
-        loader.setLocation(Main.class.getResource("/Ventanas/Menu.fxml")); 
-        try{
-        Pane ventana=(Pane) loader.load();
-        Stage stage=new Stage();
-          stage.setTitle("Menu Auto Partes");
-         Scene scene = new Scene(ventana);
-         stage.setScene(scene);
-         
-         stage.show();
-            }catch(IOException e){
-            e.printStackTrace();
-        }
+           VentanaNew.CreadorWindows("Menu", "Menu Auto Partes");
+           // cerramos ventana
+           Stage stageMenu=(Stage)txtUsuario.getScene().getWindow();
+           stageMenu.close();
        }else{
            JOptionPane.showMessageDialog(null, "Usuario incorrecto", "error", JOptionPane.ERROR_MESSAGE);
            txtpassword.setText("");
