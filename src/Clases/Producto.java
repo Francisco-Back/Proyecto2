@@ -15,6 +15,7 @@ public class Producto {
     private String Codigo;
     private String Marca;
     private String Funcion;
+    private int precio;
     
     
       int aux=2000;
@@ -29,13 +30,14 @@ public class Producto {
         this.IdProducto = IdProducto;
     }
 
-    public Producto(int IdProducto, String NombreParte, String Codigo, String Marca, String Funcion) {
+    public Producto(int IdProducto, String NombreParte, String Codigo, String Marca, String Funcion,int precio) {
         this(IdProducto);
         this.IdProducto = IdProducto;
         this.NombreParte = NombreParte;
         this.Codigo = Codigo;
         this.Marca = Marca;
         this.Funcion = Funcion;
+        this.precio=precio;
        }
 
     public int getIdProducto() {
@@ -45,6 +47,7 @@ public class Producto {
     public void setIdProducto(int IdProducto) {
         this.IdProducto = IdProducto;
     }
+
 
     public String getNombreParte() {
         return NombreParte;
@@ -78,10 +81,19 @@ public class Producto {
         this.Funcion = Funcion;
     }
 
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+    
+
     @Override
     public String toString() {
         Utileria utileria=new Utileria();
-        return "["+utileria.getNombreClase2(this)+"]" + "IdProducto=" + IdProducto + ", NombreParte=" + NombreParte + ", Codigo=" + Codigo + ", Marca=" + Marca + ", Funcion=" + Funcion + ", aux=" + aux + '}';
+        return "["+utileria.getNombreClase(this.getClass().getSimpleName())+"]" + "IdProducto=" + IdProducto + ", NombreParte=" + NombreParte + ", Codigo=" + Codigo + ", Marca=" + Marca + ", Funcion=" + Funcion + ", aux=" + aux + ",Precio"+precio;
     }
     
     
