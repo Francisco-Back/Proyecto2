@@ -75,7 +75,7 @@ public class Cliente {
     @Override
     public String toString() {
         Utileria utileria=new Utileria();
-        return "["+ utileria.getNombreClase(this)+"]" + "IdCliente=" + IdCliente + ", NombreCliente=" + NombreCliente + ", Codigo=" + Codigo + ", Empresa=" + Empresa + ", Funcion=" + Funcion;
+        return "["+ utileria.getNombreClase(this.getClass().getName())+"]" + "IdCliente=" + IdCliente + ", NombreCliente=" + NombreCliente + ", Codigo=" + Codigo + ", Empresa=" + Empresa + ", Funcion=" + Funcion;
     }
 
     
