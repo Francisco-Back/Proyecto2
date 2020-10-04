@@ -6,6 +6,7 @@
 package Data;
 
 import Clases.Cliente;
+import Clases.Producto;
 import Herencia.Empresa;
 import Herencia.Individual;
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.ArrayList;
  * @author Francisco Back
  */
 public class DataSistema {
-    public static ArrayList<Cliente> Array(){
+    public static ArrayList<Cliente> Array1(){
           ArrayList<Cliente> Arrcliente = new ArrayList<>();
         Arrcliente.add(new Individual("2548794565845",5,0,"Francisco Back","5645","Acabados","Compras"));
         Arrcliente.add(new Individual("2564876425465",5,1,"Edgar Lopez","5478","Mecanica","Compras"));
@@ -28,4 +29,19 @@ public class DataSistema {
         Arrcliente.add(new Empresa("Proyection Shock Guatemala",10,1,"Marcos Lopez","1247","Envio","Compras"));
         return Arrcliente;
     }
+
+public static ArrayList<Producto> Array2(){
+    
+    ArrayList<Producto> Arrproducto=new ArrayList<>();
+    Arrproducto.add(new Producto(1,"Disco de Freno","12345","Bajaj","Moto"));
+    Arrproducto.add(new Producto(1,"Cable de freno","13546","Bajaj","Moto"));
+    Arrproducto.add(new Producto(1,"Liquido de freno","36589","Bajaj","Moto"));
+    Arrproducto.add(new Producto(1,"Pastilla de freno","35798","Mazda","Carro"));
+    Arrproducto.add(new Producto(1,"Aceite de motor","54789","Toyota","Carro"));
+    Arrproducto.add(new Producto(1,"LLantas de moto","36547","Bajaj","Moto"));
+    Arrproducto.add(new Producto(1,"llanta de Carro","56789","Suzuki","Carro"));
+    Arrproducto.add(new Producto(1,"Filtro de Aceite","5698","Mazda","Carro"));
+        return Arrproducto;
+
+}
 }
