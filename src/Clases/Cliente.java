@@ -22,7 +22,7 @@ public class Cliente {
    int aux;
 
     public static int sigIdCliente(int IdCliente,int aux) {
-         return IdCliente + aux;
+         return aux+IdCliente ;
     }
 
     public Cliente(int IdCliente) {
