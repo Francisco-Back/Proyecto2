@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Clases;
+import Global.VentanaNew;
 
 /**
  *
@@ -11,20 +12,22 @@ package Clases;
  */
 public class Cliente {
 
-    private int IdCliente=3;
+    private int IdCliente;
     private String NombreCliente;
     private String Codigo;
     private String Empresa;
     private String Funcion;
-   
-
-    public static int sigIdCliente(int IdCliente) {
     
-         return IdCliente + 1;
+    
+   int aux;
+
+    public static int sigIdCliente(int IdCliente,int aux) {
+         return IdCliente + aux;
     }
 
     public Cliente(int IdCliente) {
-       Cliente.sigIdCliente(IdCliente);
+       Cliente.sigIdCliente(IdCliente,aux);
+       aux=IdCliente;
         this.IdCliente = IdCliente;
     }
 
