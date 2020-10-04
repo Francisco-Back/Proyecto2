@@ -10,7 +10,7 @@ package Clases;
  * @author Francisco Back
  */
 public class Utileria {
-    
+    // se crea el metodo para el retorno de la clase cliente
  public String getNombreClase(Cliente cliente){
      return Cliente.class.getSimpleName();
  
