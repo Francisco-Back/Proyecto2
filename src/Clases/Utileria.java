@@ -12,15 +12,12 @@ package Clases;
 public class Utileria {
     // se crea el metodo para el retorno de la clase 
     
- public String getNombreClase(Cliente cliente){
-     return Cliente.class.getSimpleName();
+ public String getNombreClase(String Nombreclase){
+     return Nombreclase.getClass().getName();
  
     
  }
  
-  public String getNombreClase2(Producto producto){
-     return Producto.class.getSimpleName();
-
- }
+  
  
 }
