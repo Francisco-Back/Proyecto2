@@ -25,7 +25,7 @@ public class Producto {
     }
 
     public Producto(int IdProducto) {
-       Cliente.sigIdCliente(IdProducto,aux);
+       Producto.sigIdProducto(IdProducto,aux);
        aux=IdProducto;
         this.IdProducto = IdProducto;
     }
