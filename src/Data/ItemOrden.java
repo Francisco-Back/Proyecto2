@@ -18,14 +18,14 @@ public class ItemOrden {
     private int Cantidad;
     Producto producto;
 
-    int aux=2000;
+    int aux=1;
 
     public static int sigIdOrden(int pNolinea,int aux) {
          return aux + pNolinea;
     }
 
     public ItemOrden(int pNolinea) {
-       Cliente.sigIdCliente(pNolinea,aux);
+       ItemOrden.sigIdOrden(pNolinea,aux);
        aux=pNolinea;
         this.Nolinea = pNolinea;
     }
