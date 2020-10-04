@@ -33,14 +33,14 @@ public class DataSistema {
 public static ArrayList<Producto> Array2(){
     
     ArrayList<Producto> Arrproducto=new ArrayList<>();
-    Arrproducto.add(new Producto(1,"Disco de Freno","12345","Bajaj","Moto"));
-    Arrproducto.add(new Producto(1,"Cable de freno","13546","Bajaj","Moto"));
-    Arrproducto.add(new Producto(1,"Liquido de freno","36589","Bajaj","Moto"));
-    Arrproducto.add(new Producto(1,"Pastilla de freno","35798","Mazda","Carro"));
-    Arrproducto.add(new Producto(1,"Aceite de motor","54789","Toyota","Carro"));
-    Arrproducto.add(new Producto(1,"LLantas de moto","36547","Bajaj","Moto"));
-    Arrproducto.add(new Producto(1,"llanta de Carro","56789","Suzuki","Carro"));
-    Arrproducto.add(new Producto(1,"Filtro de Aceite","5698","Mazda","Carro"));
+    Arrproducto.add(new Producto(1,"Disco de Freno","12345","Bajaj","Moto",500));
+    Arrproducto.add(new Producto(1,"Cable de freno","13546","Bajaj","Moto",600));
+    Arrproducto.add(new Producto(1,"Liquido de freno","36589","Bajaj","Moto",1000));
+    Arrproducto.add(new Producto(1,"Pastilla de freno","35798","Mazda","Carro",650));
+    Arrproducto.add(new Producto(1,"Aceite de motor","54789","Toyota","Carro",1547));
+    Arrproducto.add(new Producto(1,"LLantas de moto","36547","Bajaj","Moto",2547));
+    Arrproducto.add(new Producto(1,"llanta de Carro","56789","Suzuki","Carro",2548));
+    Arrproducto.add(new Producto(1,"Filtro de Aceite","5698","Mazda","Carro",258));
         return Arrproducto;
 
 }
