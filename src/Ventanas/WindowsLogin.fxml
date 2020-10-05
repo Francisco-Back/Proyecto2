@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #022154;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.WindowsLoginController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #022154;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.WindowsLoginController">
    <children>
       <Button fx:id="ingreso" layoutX="172.0" layoutY="319.0" mnemonicParsing="false" onAction="#ValidarIngreso" prefHeight="31.0" prefWidth="118.0" text="Login">
          <font>
@@ -35,12 +36,12 @@
             <Image url="@../Imagenes/Imagenes/LogoEmpresa.png" />
          </image>
       </ImageView>
-      <PasswordField fx:id="txtpassword" layoutX="217.0" layoutY="244.0" prefHeight="26.0" prefWidth="232.0" promptText="Contraseña">
+      <PasswordField fx:id="txtpassword" layoutX="217.0" layoutY="244.0" prefHeight="26.0" prefWidth="232.0" promptText="Contraseña" text="123">
          <effect>
             <ColorAdjust />
          </effect>
       </PasswordField>
-      <TextField fx:id="txtUsuario" layoutX="217.0" layoutY="187.0" prefHeight="26.0" prefWidth="232.0" promptText="Usuario" />
+      <TextField fx:id="txtUsuario" layoutX="217.0" layoutY="187.0" prefHeight="26.0" prefWidth="232.0" promptText="Usuario" text="francisco" />
      
    </children>
    <cursor>
