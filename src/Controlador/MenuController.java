@@ -32,6 +32,7 @@ public class MenuController implements Initializable {
 
     public Button Mostrar;
     public Pane Individual;
+    public Pane empresa;
     @FXML
     private TableColumn Descuento;
     @FXML
@@ -53,6 +54,7 @@ public class MenuController implements Initializable {
     @FXML
     private TableView tabla;
     private ObservableList<Cliente> mostrar;
+    private ObservableList<Cliente> mostrar1;
 
     /**
      * Initializes the controller clas s.
@@ -69,23 +71,57 @@ public class MenuController implements Initializable {
         this.funcion.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
 
     }
+    
+      public void initialize() {
+        mostrar1 = FXCollections.observableArrayList(DataSistema.Array2());
+        this.dpicodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
+        this.Descuento.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
+        this.idcliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
+        this.nombre.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
+        this.codgio.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
+        this.empres.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
+        this.funcion.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
+
+    }
 
     public void Buscar(ActionEvent actionEvent) {
 
     }
 
-    @FXML
-    public void initialize() {
-
-    }
+    
 
     @FXML
     public void Mostrar(ActionEvent actionEvent) {
 
         this.tabla.setItems(mostrar);
     }
+     public void Mostrar1(ActionEvent actionEvent) {
+
+        this.tabla.setItems(mostrar1);
+    }
 
     public void verIndividual(ActionEvent actionEvent) {
        Individual.setVisible(true);
+        empresa.setVisible(false);
     }
+     public void empresa(ActionEvent actionEvent) {
+         Individual.setVisible(false);
+       empresa.setVisible(true);
+    }
+     public void ingreso(ActionEvent actionEvent) {
+       //empresa.setVisible(true);
+    }
+     public void catalogo(ActionEvent actionEvent) {
+       //empresa.setVisible(true);
+    }
+     public void Ingresop(ActionEvent actionEvent) {
+       //empresa.setVisible(true);
+    }
+     public void OrdCompra(ActionEvent actionEvent) {
+       //empresa.setVisible(true);
+    }
+     public void IngresoCom(ActionEvent actionEvent) {
+       //empresa.setVisible(true);
+    }
+    
 }
