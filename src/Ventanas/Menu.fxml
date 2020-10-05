@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F0FFF0; -fx-background-size: #8A2BE2#F0FFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="611.0" prefWidth="787.0" style="-fx-background-color: #F0FFF0; -fx-background-size: #8A2BE2#F0FFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.MenuController">
    <children>
       <MenuBar cache="true" cacheHint="SPEED" layoutY="8.0" prefHeight="32.0" prefWidth="400.0" style="-fx-background-color: #F0FFFF;">
         <menus>
           <Menu mnemonicParsing="false" style="fontr: #FFFFFF;" text="Cliente">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#verIndividual" text="Individual" />
+                  <MenuItem mnemonicParsing="false" onAction="#empresa" text="Empresa" />
+                  <MenuItem mnemonicParsing="false" onAction="#ingreso" text="Ingreso Cliente" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Producto">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" onAction="#catalogo" text="Catalogo " />
+                  <MenuItem mnemonicParsing="false" onAction="#Ingresop" text="Ingreso Producto" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Ordenes Compra">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#OrdCompra" text="Compra " />
+                  <MenuItem mnemonicParsing="false" onAction="#IngresoCom" text="Ingresar Compra" />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="opciones">
@@ -49,6 +59,24 @@
                   <TableColumn fx:id="funcion" prefWidth="76.0" text="Funcion" />
                   <TableColumn fx:id="Descuento" prefWidth="81.0" text="Descuento" />
               </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane fx:id="empresa" layoutX="21.0" layoutY="50.0" prefHeight="600.0" prefWidth="800.0" visible="false">
+         <children>
+            <Button fx:id="Buscar1" layoutX="290.0" layoutY="31.0" mnemonicParsing="false" onAction="#Buscar" text="Buscar" />
+            <TextField layoutX="81.0" layoutY="31.0" />
+            <Button fx:id="Mostrar1" layoutX="385.0" layoutY="31.0" mnemonicParsing="false" onAction="#Mostrar" text="Todo" />
+            <TableView fx:id="tabla1E" layoutX="70.0" layoutY="96.0" prefHeight="407.0" prefWidth="630.0">
+               <columns>
+                  <TableColumn fx:id="idcliente1" prefWidth="78.0" text="id Cliente" />
+                  <TableColumn fx:id="dpicodigo1" prefWidth="122.0" text="codigo o DPI" />
+                  <TableColumn fx:id="nombre1" prefWidth="115.0" text="Nombre" />
+                  <TableColumn fx:id="codgio1" prefWidth="75.0" text="Codigo" />
+                  <TableColumn fx:id="empres1" minWidth="5.0" prefWidth="82.0" text="Empresa" />
+                  <TableColumn fx:id="funcion1" prefWidth="76.0" text="Funcion" />
+                  <TableColumn fx:id="Descuento1" prefWidth="81.0" text="Descuento" />
+               </columns>
             </TableView>
          </children>
       </Pane>
