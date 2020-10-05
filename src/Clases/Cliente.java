@@ -5,34 +5,40 @@
  */
 package Clases;
 import Global.VentanaNew;
+import java.util.List;
 
 /**
  *
  * @author Francisco Back
  */
 public class Cliente {
-
+private static int correlt=0;
     private int IdCliente;
     private String NombreCliente;
     private String Codigo;
     private String Empresa;
     private String Funcion;
+    //private List<Cliente>cliente;
     
     
-   int aux;
+   
 
-    public static int sigIdCliente(int IdCliente,int aux) {
-         return aux+IdCliente ;
-    }
+  
 
     public Cliente(int IdCliente) {
-       Cliente.sigIdCliente(IdCliente,aux);
-       aux=IdCliente;
-        this.IdCliente = IdCliente;
+        this.IdCliente = correlt++;
+    }
+    
+      public Cliente() {
+        this.IdCliente = correlt++;
+        this.NombreCliente = "";
+        this.Codigo = "";
+        this.Empresa = "";
+        this.Funcion = "";
     }
 
     public Cliente(int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
-        this(IdCliente);
+        this.IdCliente=IdCliente;
         this.NombreCliente = NombreCliente;
         this.Codigo = Codigo;
         this.Empresa = Empresa;
@@ -71,6 +77,19 @@ public class Cliente {
     public void setFuncion(String Funcion) {
         this.Funcion = Funcion;
     }
+
+    public String getNombreCliente() {
+        return NombreCliente;
+    }
+
+    public void setNombreCliente(String NombreCliente) {
+        this.NombreCliente = NombreCliente;
+    }
+
+    public int getIdCliente() {
+        return IdCliente;
+    }
+    
 
     @Override
     public String toString() {
