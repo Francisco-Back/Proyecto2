@@ -12,21 +12,21 @@ import Clases.Cliente;
  * @author Francisco Back
  */
 public class Empresa extends Cliente{
-    private String Contacto;
+    private String Dpi;
     private int Descuento;
 
-    public Empresa(String Contacto, int Descuento, int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
+    public Empresa(String Dpi, int Descuento, int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
         super(IdCliente, NombreCliente, Codigo, Empresa, Funcion);
-        this.Contacto = Contacto;
+        this.Dpi = Dpi;
         this.Descuento = Descuento;
     }
 
-    public String getContacto() {
-        return Contacto;
+    public String getDpi() {
+        return Dpi;
     }
 
-    public void setContacto(String Contacto) {
-        this.Contacto = Contacto;
+    public void getDpi(String Dpi) {
+        this.Dpi = Dpi;
     }
 
     public int getDescuento() {
@@ -41,7 +41,7 @@ public class Empresa extends Cliente{
 
     @Override
     public String toString() {
-        return "Empresa{" + "Contacto=" + Contacto + ", Descuento=" + Descuento + '}'+super.toString();
+        return "Empresa{" + "Contacto=" + Dpi + ", Descuento=" + Descuento + '}'+super.toString();
     }
 
    
