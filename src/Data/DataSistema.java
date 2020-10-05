@@ -23,7 +23,10 @@ public class DataSistema {
         Arrcliente.add(new Individual("2564876425465",5,2,"Edgar Lopez","5478","Mecanica","Compras"));
         Arrcliente.add(new Individual("2256484648465",5,3,"Juan Chulc","6897","Distribuidor","Compras"));
         Arrcliente.add(new Individual("2542546758349",5,4,"Pedro Alvarado","2546","Banco","Compras"));
-    
+    /* Arrcliente.add(new Empresa("Servicel Guatemala",10,1,"Flor Garcia","7894","Servicel","Compras"));
+        Arrcliente.add(new Empresa("The People Company",10,1,"Carlos Reyes","5464","Reparto","Compras"));
+        Arrcliente.add(new Empresa("Azteca Partes",10,1,"Carlos Salay","6938","Logistica","Compras"));
+        Arrcliente.add(new Empresa("Proyection Shock Guatemala",10,1,"Marcos Lopez","1247","Envio","Compras"));*/
         return Arrcliente;
     }
     
