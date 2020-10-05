@@ -62,21 +62,21 @@
             </TableView>
          </children>
       </Pane>
-      <Pane fx:id="empresa" layoutX="21.0" layoutY="50.0" prefHeight="600.0" prefWidth="800.0" visible="false">
+      <Pane fx:id="MostrarEmpresa" layoutX="11.0" layoutY="55.0" prefHeight="570.0" prefWidth="800.0" visible="false">
          <children>
-            <Button fx:id="Buscar1" layoutX="290.0" layoutY="31.0" mnemonicParsing="false" onAction="#Buscar" text="Buscar" />
-            <TextField layoutX="81.0" layoutY="31.0" />
-            <Button fx:id="Mostrar1" layoutX="385.0" layoutY="31.0" mnemonicParsing="false" onAction="#Mostrar" text="Todo" />
-            <TableView fx:id="tabla1E" layoutX="70.0" layoutY="96.0" prefHeight="407.0" prefWidth="630.0">
-               <columns>
-                  <TableColumn fx:id="idcliente1" prefWidth="78.0" text="id Cliente" />
-                  <TableColumn fx:id="dpicodigo1" prefWidth="122.0" text="codigo o DPI" />
-                  <TableColumn fx:id="nombre1" prefWidth="115.0" text="Nombre" />
-                  <TableColumn fx:id="codgio1" prefWidth="75.0" text="Codigo" />
-                  <TableColumn fx:id="empres1" minWidth="5.0" prefWidth="82.0" text="Empresa" />
-                  <TableColumn fx:id="funcion1" prefWidth="76.0" text="Funcion" />
-                  <TableColumn fx:id="Descuento1" prefWidth="81.0" text="Descuento" />
-               </columns>
+            <Button layoutX="400.0" layoutY="69.0" mnemonicParsing="false" onAction="#MostrarEmpresa" text="Todo" />
+            <Button layoutX="305.0" layoutY="69.0" mnemonicParsing="false" onAction="#BuscarEmpresa" text="Buscar" />
+            <TextField layoutX="129.0" layoutY="69.0" />
+            <TableView layoutX="44.0" layoutY="123.0" prefHeight="422.0" prefWidth="643.0">
+              <columns>
+                  <TableColumn prefWidth="84.0" text="ID " />
+                  <TableColumn prefWidth="114.0" text="EMPRESA" />
+                  <TableColumn prefWidth="89.0" text="CONTACTO" />
+                  <TableColumn prefWidth="82.0" text="CODIGO" />
+                  <TableColumn prefWidth="75.0" text="AREA" />
+                  <TableColumn prefWidth="97.0" text="FUNCION" />
+                  <TableColumn prefWidth="101.0" text="DESCUENTO" />
+              </columns>
             </TableView>
          </children>
       </Pane>
