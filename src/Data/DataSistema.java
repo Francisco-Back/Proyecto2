@@ -19,10 +19,16 @@ import java.util.ArrayList;
 public class DataSistema {
     public static ArrayList<Cliente> Array1(){
           ArrayList<Cliente> Arrcliente = new ArrayList<>();
-        Arrcliente.add(new Individual("2548794565845",5,0,"Francisco Back","5645","Acabados","Compras"));
-        Arrcliente.add(new Individual("2564876425465",5,1,"Edgar Lopez","5478","Mecanica","Compras"));
-        Arrcliente.add(new Individual("2256484648465",5,1,"Juan Chulc","6897","Distribuidor","Compras"));
-        Arrcliente.add(new Individual("2542546758349",5,1,"Pedro Alvarado","2546","Banco","Compras"));
+        Arrcliente.add(new Individual("2548794565845",5,1,"Francisco Back","5645","Acabados","silo trajo"));
+        Arrcliente.add(new Individual("2564876425465",5,2,"Edgar Lopez","5478","Mecanica","Compras"));
+        Arrcliente.add(new Individual("2256484648465",5,3,"Juan Chulc","6897","Distribuidor","Compras"));
+        Arrcliente.add(new Individual("2542546758349",5,4,"Pedro Alvarado","2546","Banco","Compras"));
+    
+        return Arrcliente;
+    }
+    
+     public static ArrayList<Cliente> Array2(){
+          ArrayList<Cliente> Arrcliente = new ArrayList<>();
         Arrcliente.add(new Empresa("Servicel Guatemala",10,1,"Flor Garcia","7894","Servicel","Compras"));
         Arrcliente.add(new Empresa("The People Company",10,1,"Carlos Reyes","5464","Reparto","Compras"));
         Arrcliente.add(new Empresa("Azteca Partes",10,1,"Carlos Salay","6938","Logistica","Compras"));
@@ -30,7 +36,7 @@ public class DataSistema {
         return Arrcliente;
     }
 
-public static ArrayList<Producto> Array2(){
+public static ArrayList<Producto> Arrayp1(){
     
     ArrayList<Producto> Arrproducto=new ArrayList<>();
     Arrproducto.add(new Producto(1,"Disco de Freno","12345","Bajaj","Moto",500));
