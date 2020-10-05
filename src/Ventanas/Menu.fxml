@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F0FFF0; -fx-background-size: #8A2BE2#F0FFFF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #F0FFF0; -fx-background-size: #8A2BE2#F0FFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.MenuController">
    <children>
       <MenuBar cache="true" cacheHint="SPEED" layoutY="8.0" prefHeight="32.0" prefWidth="400.0" style="-fx-background-color: #F0FFFF;">
         <menus>
           <Menu mnemonicParsing="false" style="fontr: #FFFFFF;" text="Cliente">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" onAction="#verIndividual" text="Individual" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Producto">
@@ -33,5 +34,23 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </MenuBar>
+      <Pane fx:id="Individual" layoutX="11.0" layoutY="40.0" prefHeight="600.0" prefWidth="800.0" visible="false">
+         <children>
+            <Button fx:id="Buscar" layoutX="290.0" layoutY="31.0" mnemonicParsing="false" onAction="#Buscar" text="Buscar" />
+            <TextField layoutX="81.0" layoutY="31.0" />
+            <Button fx:id="Mostrar" layoutX="385.0" layoutY="31.0" mnemonicParsing="false" onAction="#Mostrar" text="Todo" />
+            <TableView fx:id="tabla" layoutX="70.0" layoutY="96.0" prefHeight="407.0" prefWidth="630.0">
+              <columns>
+                  <TableColumn fx:id="idcliente" prefWidth="78.0" text="id Cliente" />
+                <TableColumn fx:id="dpicodigo" prefWidth="122.0" text="codigo o DPI" />
+                  <TableColumn fx:id="nombre" prefWidth="115.0" text="Nombre" />
+                  <TableColumn fx:id="codgio" prefWidth="75.0" text="Codigo" />
+                  <TableColumn fx:id="empres" minWidth="5.0" prefWidth="82.0" text="Empresa" />
+                  <TableColumn fx:id="funcion" prefWidth="76.0" text="Funcion" />
+                  <TableColumn fx:id="Descuento" prefWidth="81.0" text="Descuento" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
