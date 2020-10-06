@@ -22,6 +22,12 @@ public class Individual extends Cliente {
         this.Descuento = Descuento;
     }
 
+    public Individual( int IdCliente) {
+        super(IdCliente);
+       
+    }
+    
+
     public String getDpi() {
         return Dpi;
     }
