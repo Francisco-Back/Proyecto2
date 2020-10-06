@@ -18,7 +18,7 @@
           <Menu mnemonicParsing="false" style="fontr: #FFFFFF;" text="Cliente">
             <items>
               <MenuItem mnemonicParsing="false" onAction="#verIndividual" text="Individual" />
-                  <MenuItem mnemonicParsing="false" onAction="#empresa" text="Empresa" />
+                  <MenuItem mnemonicParsing="false" onAction="#verempresa" text="Empresa" />
                   <MenuItem mnemonicParsing="false" onAction="#ingreso" text="Ingreso Cliente" />
             </items>
           </Menu>
@@ -62,20 +62,20 @@
             </TableView>
          </children>
       </Pane>
-      <Pane fx:id="MostrarEmpresa" layoutX="11.0" layoutY="55.0" prefHeight="570.0" prefWidth="800.0" visible="false">
+      <Pane fx:id="MostrarEmpresa" layoutY="35.0" prefHeight="570.0" prefWidth="800.0" visible="false">
          <children>
-            <Button layoutX="400.0" layoutY="69.0" mnemonicParsing="false" onAction="#MostrarEmpresa" text="Todo" />
-            <Button layoutX="305.0" layoutY="69.0" mnemonicParsing="false" onAction="#BuscarEmpresa" text="Buscar" />
-            <TextField layoutX="129.0" layoutY="69.0" />
-            <TableView layoutX="44.0" layoutY="123.0" prefHeight="422.0" prefWidth="643.0">
+            <Button layoutX="356.0" layoutY="33.0" mnemonicParsing="false" onAction="#MostrarEmpresa" text="Todo" />
+            <Button layoutX="267.0" layoutY="33.0" mnemonicParsing="false" onAction="#BuscarEmpresa" text="Buscar" />
+            <TextField layoutX="90.0" layoutY="33.0" />
+            <TableView fx:id="tablaEmpresa" layoutX="52.0" layoutY="122.0" prefHeight="422.0" prefWidth="694.0">
               <columns>
-                  <TableColumn prefWidth="84.0" text="ID " />
-                  <TableColumn prefWidth="114.0" text="EMPRESA" />
-                  <TableColumn prefWidth="89.0" text="CONTACTO" />
-                  <TableColumn prefWidth="82.0" text="CODIGO" />
-                  <TableColumn prefWidth="75.0" text="AREA" />
-                  <TableColumn prefWidth="97.0" text="FUNCION" />
-                  <TableColumn prefWidth="101.0" text="DESCUENTO" />
+                  <TableColumn fx:id="ID" prefWidth="84.0" text="ID " />
+                  <TableColumn fx:id="EMPRESA" prefWidth="157.0" text="EMPRESA" />
+                  <TableColumn fx:id="CONTACTO" prefWidth="105.0" text="CONTACTO" />
+                  <TableColumn fx:id="CODIGO" prefWidth="61.0" text="CODIGO" />
+                  <TableColumn fx:id="AREA" prefWidth="61.0" text="AREA" />
+                  <TableColumn fx:id="FUNCION" prefWidth="103.0" text="FUNCION" />
+                  <TableColumn fx:id="DESCUEN" prefWidth="122.0" text="DESCUEN" />
               </columns>
             </TableView>
          </children>
