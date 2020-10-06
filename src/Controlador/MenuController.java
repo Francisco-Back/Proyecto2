@@ -186,6 +186,7 @@ public class MenuController implements Initializable {
     @FXML
      public void Ingresop(ActionEvent actionEvent) {
        //empresa.setVisible(true);
+       Global.VentanaNew.CreadorWindows("Compras", "Compras");
     }
     @FXML
      public void OrdCompra(ActionEvent actionEvent) {
