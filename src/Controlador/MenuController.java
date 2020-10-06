@@ -69,6 +69,7 @@ public class MenuController implements Initializable {
     private TableView tablaEmpresa;
     @FXML
     private TableColumn  DESCUEN;
+    private ObservableList<Cliente> Mostraremp;
     
     
 
@@ -85,11 +86,18 @@ public class MenuController implements Initializable {
         this.codgio.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
         this.empres.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
         this.funcion.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
-        
-
+        Mostraremp=FXCollections.observableArrayList(DataSistema.Array2());
+        this.EMPRESA.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Dpi"));
+        this.ID.setCellValueFactory(new PropertyValueFactory<Cliente,Integer>("IdCliente"));
+        this.DESCUEN.setCellValueFactory(new PropertyValueFactory<Cliente,Integer>("Descuento"));
+        this.AREA.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Empresa"));
+        this.FUNCION.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Funcion"));
+        this.CONTACTO.setCellValueFactory(new PropertyValueFactory<Cliente,String>("NombreCliente"));
+        this.CODIGO.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Codigo"));
     }
     
     public void initialize(){
+
       
     }
 
@@ -108,7 +116,7 @@ public class MenuController implements Initializable {
     }
     @FXML
      public void MostrarEmpresa(ActionEvent actionEvent) {
- 
+ this.tablaEmpresa.setItems(Mostraremp);
     }
 
     @FXML
