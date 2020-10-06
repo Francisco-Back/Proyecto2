@@ -15,7 +15,7 @@ public class Empresa extends Cliente{
     private String Dpi;
     private int Descuento;
 
-    public Empresa(String Dpi, int Descuento, int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
+        public Empresa(String Dpi, int Descuento, int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
         super(IdCliente, NombreCliente, Codigo, Empresa, Funcion);
         this.Dpi = Dpi;
         this.Descuento = Descuento;
