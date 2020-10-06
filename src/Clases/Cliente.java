@@ -12,7 +12,7 @@ import java.util.List;
  * @author Francisco Back
  */
 public class Cliente {
-private static int correlt=0;
+private static int correlativoCodigo=1;
     private int IdCliente;
     private String NombreCliente;
     private String Codigo;
@@ -26,19 +26,19 @@ private static int correlt=0;
   
 
     public Cliente(int IdCliente) {
-        this.IdCliente = correlt++;
+        this.IdCliente = 0;
     }
     
       public Cliente() {
-        this.IdCliente = correlt++;
-        this.NombreCliente = "";
+        this.IdCliente = 0;
+        this.NombreCliente = "no-nombre";
         this.Codigo = "";
         this.Empresa = "";
         this.Funcion = "";
     }
 
     public Cliente(int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
-        this.IdCliente=IdCliente;
+        this.IdCliente=correlativoCodigo++;
         this.NombreCliente = NombreCliente;
         this.Codigo = Codigo;
         this.Empresa = Empresa;
