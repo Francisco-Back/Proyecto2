@@ -11,6 +11,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -28,8 +29,29 @@ public class VentanaNew {
         Stage stage=new Stage();
           stage.setTitle(Titulo);
          Scene scene = new Scene(ventana);
+        
          stage.setScene(scene);
          
+        
+         stage.show();
+            }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+    public static void CreadorWindowsInterno(String NombreV, String Titulo){
+              try{
+                  //
+             FXMLLoader loader=new FXMLLoader();
+        loader.setLocation(Main.class.getResource("/Ventanas/"+NombreV+".fxml")); 
+            // se inicia la nueva ventana
+        Pane ventana=(Pane) loader.load();
+        Stage stage=new Stage();
+          stage.setTitle(Titulo);
+         Scene scene = new Scene(ventana);
+         stage.initStyle(StageStyle.UTILITY);
+         stage.setScene(scene);
+         
+        
          stage.show();
             }catch(IOException e){
             e.printStackTrace();
