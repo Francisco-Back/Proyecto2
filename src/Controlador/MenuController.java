@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import Data.DataSistema;
+import static Data.DataSistema.Array1;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -34,8 +35,6 @@ public class MenuController implements Initializable {
     @FXML
     private TableColumn Descuento;
     @FXML
-    private TableColumn id;
-    @FXML
     private TableColumn dpicodigo;
     @FXML
     private TableColumn idcliente;
@@ -48,12 +47,28 @@ public class MenuController implements Initializable {
     @FXML
     private TableColumn funcion;
     @FXML
-    private TextField IDcliente;
-    @FXML
     private TableView tabla;
-    private TableView tabla1E;
+    
     private ObservableList<Cliente> mostrar;
-    private ObservableList<Cliente> mostrar1;
+   
+    @FXML
+    private Button Buscar;
+    @FXML
+    private TableColumn ID;
+    @FXML
+    private TableColumn EMPRESA;
+    @FXML
+    private TableColumn CONTACTO;
+    @FXML
+    private TableColumn CODIGO;
+    @FXML
+    private TableColumn AREA;
+    @FXML
+    private TableColumn FUNCION;
+    @FXML
+    private TableView tablaEmpresa;
+    @FXML
+    private TableColumn  DESCUEN;
     
     
 
@@ -63,7 +78,6 @@ public class MenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         mostrar = FXCollections.observableArrayList(DataSistema.Array1());
-        mostrar1 = FXCollections.observableArrayList(DataSistema.Array2());
         this.dpicodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
         this.Descuento.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
         this.idcliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
@@ -72,36 +86,37 @@ public class MenuController implements Initializable {
         this.empres.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
         this.funcion.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
         
-        
 
     }
     
- 
+    public void initialize(){
+      
+    }
 
+    @FXML
     public void Buscar(ActionEvent actionEvent) {
 
     }
+    @FXML
     public void BuscarEmpresa(ActionEvent actionEvent) {
 
     }
-
-    
-
     @FXML
     public void Mostrar(ActionEvent actionEvent) {
 
         this.tabla.setItems(mostrar);
     }
+    @FXML
      public void MostrarEmpresa(ActionEvent actionEvent) {
-
-        
+ 
     }
 
+    @FXML
     public void verIndividual(ActionEvent actionEvent) {
        Individual.setVisible(true);
         MostrarEmpresa.setVisible(false);
     }
-     public void empresa(ActionEvent actionEvent) {
+     public void verempresa(ActionEvent actionEvent) {
          Individual.setVisible(false);
        MostrarEmpresa.setVisible(true);
     }
@@ -111,20 +126,29 @@ public class MenuController implements Initializable {
      
      
      
+    @FXML
      public void ingreso(ActionEvent actionEvent) {
        //empresa.setVisible(true);
     }
+    @FXML
      public void catalogo(ActionEvent actionEvent) {
        //empresa.setVisible(true);
     }
+    @FXML
      public void Ingresop(ActionEvent actionEvent) {
        //empresa.setVisible(true);
     }
+    @FXML
      public void OrdCompra(ActionEvent actionEvent) {
        //empresa.setVisible(true);
     }
+    @FXML
      public void IngresoCom(ActionEvent actionEvent) {
        //empresa.setVisible(true);
+    }
+
+    @FXML
+    private void empresa(ActionEvent event) {
     }
     
 }
