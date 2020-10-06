@@ -51,4 +51,19 @@ public static ArrayList<Producto> Arrayp1(){
         return Arrproducto;
 
 }
+/*
+public static ArrayList<Orden> ArrayO1(){
+    
+    ArrayList<Orden> ArrOrden=new ArrayList<>();
+    ArrOrden.add(new Orden());
+    ArrOrden.add(new Producto(1,"Cable de freno","13546","Bajaj","Moto",600));
+    ArrOrden.add(new Producto(1,"Liquido de freno","36589","Bajaj","Moto",1000));
+    ArrOrden.add(new Producto(1,"Pastilla de freno","35798","Mazda","Carro",650));
+    ArrOrden.add(new Producto(1,"Aceite de motor","54789","Toyota","Carro",1547));
+    ArrOrden.add(new Producto(1,"LLantas de moto","36547","Bajaj","Moto",2547));
+    ArrOrden.add(new Producto(1,"llanta de Carro","56789","Suzuki","Carro",2548));
+    ArrOrden.add(new Producto(1,"Filtro de Aceite","5698","Mazda","Carro",258));
+        return ArrOrden;
+
+}*/
 }
