@@ -99,6 +99,7 @@ public class MenuController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        Cliente e = null;
         mostrar = FXCollections.observableArrayList(DataSistema.Array1());
         this.dpicodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
         this.Descuento.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
