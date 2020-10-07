@@ -21,9 +21,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -92,6 +94,12 @@ public class MenuController implements Initializable {
     private MenuItem catalogo;
     @FXML
     private TableView TablaPartes;
+    @FXML
+    private Button Buscar;
+    @FXML
+    private TextField TextoBus;
+    @FXML
+    private Button partes;
     
     
 
@@ -133,20 +141,15 @@ public class MenuController implements Initializable {
 
     @FXML
     public void Buscar(ActionEvent actionEvent) {
-        
-      if(DataSistema.Array1().contains(ID)){
-          this.dpicodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
-        this.Descuento.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
-        this.idcliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
-        this.nombre.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
-        this.codgio.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
-        this.empres.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
-        this.funcion.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
+        String codigo=TextoBus.getText();
+                if(DataSistema.Array1().contains(codigo)){
+                    
+                   this.tabla.setItems(mostrar);
       }else{
-          
-      }
+                    JOptionPane.showMessageDialog(null, "Dato no Encontrado", "error", JOptionPane.ERROR_MESSAGE);
+                    TextoBus.setText("");
        
-    }
+    }}
     @FXML
     public void BuscarEmpresa(ActionEvent actionEvent) {
 
