@@ -87,6 +87,7 @@ public class MenuController implements Initializable {
     @FXML
     private TableColumn PRECIO;
     private ObservableList<Producto> Catalogo;
+    private ObservableList<Cliente> bucar;
     @FXML
     private MenuItem catalogo;
     @FXML
@@ -99,7 +100,6 @@ public class MenuController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Cliente e = null;
         mostrar = FXCollections.observableArrayList(DataSistema.Array1());
         this.dpicodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
         this.Descuento.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
@@ -133,7 +133,19 @@ public class MenuController implements Initializable {
 
     @FXML
     public void Buscar(ActionEvent actionEvent) {
-
+        
+      if(DataSistema.Array1().contains(ID)){
+          this.dpicodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
+        this.Descuento.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
+        this.idcliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
+        this.nombre.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
+        this.codgio.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
+        this.empres.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
+        this.funcion.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
+      }else{
+          
+      }
+       
     }
     @FXML
     public void BuscarEmpresa(ActionEvent actionEvent) {
