@@ -48,7 +48,7 @@ public class VentanaNew {
         Stage stage=new Stage();
           stage.setTitle(Titulo);
          Scene scene = new Scene(ventana);
-         stage.initStyle(StageStyle.UTILITY);
+         stage.initStyle(StageStyle.UNDECORATED);
          stage.setScene(scene);
          
         
