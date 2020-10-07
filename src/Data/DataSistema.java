@@ -41,11 +41,8 @@ public class DataSistema {
         Arrcliente.add(new Empresa("Proyection Shock Guatemala",10,1,"Marcos Lopez","1247","Envio","Compras"));
         return Arrcliente;
     }
-         public static void ingreso(Cliente e){
-             
-          DataSistema.Array1().add(e);
-          
-    }
+      
+         
 
 public static ArrayList<Producto> Arrayp1(){
     
