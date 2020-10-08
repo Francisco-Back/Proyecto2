@@ -28,7 +28,6 @@ public class DataSistema {
         Arrcliente.add(new Individual("2542546758349",5,1,"Pedro Alvarado","2546","Banco","Compras"));
         Arrcliente.add(new Individual("2542546758349",5,1,"Pedro Alvarado","2546","Banco","Compras"));
         
-        
         return Arrcliente;
     }
  
@@ -58,6 +57,13 @@ public static ArrayList<Producto> Arrayp1(){
         return Arrproducto;
 
 }
+     public static ArrayList<Cliente> Todos(){
+          ArrayList<Cliente> Todos = new ArrayList<>();
+     Todos.addAll(DataSistema.Array1());
+     Todos.addAll(DataSistema.Array2());
+        return Todos;
+    }
+      
 /*
 public static ArrayList<Orden> ArrayO1(){
     
