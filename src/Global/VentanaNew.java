@@ -17,8 +17,9 @@ import javafx.stage.StageStyle;
  *
  * @author Francisco Back
  */
+// se crea la clase ventanas 
 public class VentanaNew {
-    
+    // se crea el metodo  para poder realizar multiples ventanas si necesidad de reescribir el codigo 
     public static void CreadorWindows(String NombreV, String Titulo){
               try{
                   //
@@ -38,6 +39,8 @@ public class VentanaNew {
             e.printStackTrace();
         }
     }
+    
+    // se crea un metod nuevo probando un tipo de estilo para ventanas
     public static void CreadorWindowsInterno(String NombreV, String Titulo){
               try{
                   //
@@ -59,4 +62,4 @@ public class VentanaNew {
     }
     
     
-}
+}//fin de clase
