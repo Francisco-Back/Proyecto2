@@ -11,6 +11,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import Data.DataSistema;
+import Herencia.Empresa;
+import Herencia.Individual;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -37,7 +39,20 @@ public class MenuController implements Initializable {
     public Button Mostrar;
     public Pane Individual;
     public Pane MostrarEmpresa;
-
+    public Pane PaneIngreso;
+    public Pane PaneIngresoparte;
+    public TextField txtNombreCliente;
+    public TextField txtContacto;
+    public TextField txtEmpresa;
+    public TextField txtCodigo;
+    public TextField txtFuncion;
+    public boolean IND = false;
+    public boolean EMP = false;
+    public TextField txtNombreParte;
+    public TextField txtFuncionParte;
+    public TextField txtMarcaParte;
+    public TextField txtCodigoParte;
+    public TextField txtPrecioParte;
     @FXML
     private TableColumn ID;
     @FXML
@@ -157,27 +172,6 @@ public class MenuController implements Initializable {
 
     }
 
-    public void initialize() {
-
-    }
-
-    @FXML
-    public void Buscar(ActionEvent actionEvent) {
-        String codigo = "";
-        if (DataSistema.Array1().contains(codigo)) {
-
-            this.tablaEmpresa1.setItems(MostraInd);
-        } else {
-            JOptionPane.showMessageDialog(null, "Dato no Encontrado", "error", JOptionPane.ERROR_MESSAGE);
-
-        }
-    }
-
-    @FXML
-    public void BuscarEmpresa(ActionEvent actionEvent) {
-
-    }
-
     @FXML
     public void Mostrar(ActionEvent actionEvent) {
 
@@ -187,11 +181,13 @@ public class MenuController implements Initializable {
 
     @FXML
     public void MostrarEmpresa(ActionEvent actionEvent) {
+
         this.tablaEmpresa.setItems(Mostraremp);
     }
 
     @FXML
     private void MostrarPartes(ActionEvent actionevent) {
+
         this.TablaPartes.setItems(Catalogo);
     }
 
@@ -208,6 +204,8 @@ public class MenuController implements Initializable {
         MostrarEmpresa.setVisible(false);
         PanePartes.setVisible(false);
         PaneCLientes.setVisible(false);
+        PaneIngreso.setVisible(false);
+        PaneIngresoparte.setVisible(false);
 
     }
 
@@ -217,6 +215,8 @@ public class MenuController implements Initializable {
         PanePartes.setVisible(false);
         MostrarEmpresa.setVisible(true);
         PaneCLientes.setVisible(false);
+        PaneIngreso.setVisible(false);
+        PaneIngresoparte.setVisible(false);
     }
 
     @FXML
@@ -225,12 +225,18 @@ public class MenuController implements Initializable {
         PanePartes.setVisible(false);
         MostrarEmpresa.setVisible(false);
         PaneCLientes.setVisible(true);
-
+        PaneIngreso.setVisible(false);
+        PaneIngresoparte.setVisible(false);
     }
 
     @FXML
-    public void ingreso(ActionEvent actionEvent) {
-        //empresa.setVisible(true);
+    public void IngresoCliente(ActionEvent actionEvent) {
+        PaneIngreso.setVisible(true);
+        Individual.setVisible(false);
+        PanePartes.setVisible(false);
+        MostrarEmpresa.setVisible(false);
+        PaneCLientes.setVisible(false);
+        PaneIngresoparte.setVisible(false);
     }
 
     @FXML
@@ -239,13 +245,26 @@ public class MenuController implements Initializable {
         MostrarEmpresa.setVisible(false);
         PanePartes.setVisible(true);
         PaneCLientes.setVisible(false);
+        PaneIngreso.setVisible(false);
+        PaneIngresoparte.setVisible(false);
 
     }
 
     @FXML
     public void Ingresop(ActionEvent actionEvent) {
-        //empresa.setVisible(true);
-        Global.VentanaNew.CreadorWindowsInterno("Compras", "Compras");
+       PaneIngresoparte.setVisible(true);
+        Individual.setVisible(false);
+        MostrarEmpresa.setVisible(false);
+        PanePartes.setVisible(false);
+        PaneCLientes.setVisible(false);
+        PaneIngreso.setVisible(false);
+       
+    }
+
+    @FXML
+    public void PaneIngresosalir(ActionEvent actionEvent) {
+
+        PaneIngreso.setVisible(false);
     }
 
     @FXML
@@ -259,7 +278,56 @@ public class MenuController implements Initializable {
     }
 
     @FXML
-    private void BuscarPartes(ActionEvent event) {
+    public void GrabarCliente(ActionEvent actionEvent) {
+          String Dpi = txtNombreCliente.getText();
+        String Empresa = txtEmpresa.getText();
+        String Contacto = txtContacto.getText();
+        String Codigo = txtCodigo.getText();
+        String Funcion = txtFuncion.getText();
+       
+        if (IND == true) {
+             Individual e = new Individual(Dpi, 5, 1, Contacto, Codigo, Empresa, Funcion);
+            Global.Global.Ingreso(e);
+        }if(EMP=true){
+            Empresa e = new Empresa(Dpi, 10, 1, Contacto, Codigo, Empresa, Funcion);
+        Global.Global.Ingreso2(e);
+        }else {
+             JOptionPane.showMessageDialog(null, "Infomracion No grabada", "error", JOptionPane.ERROR_MESSAGE);
+        }
+        txtNombreCliente.setText("");
+        txtFuncion.setText("");
+        txtEmpresa.setText("");
+        txtContacto.setText("");
+        txtCodigo.setText("");
     }
 
+    @FXML
+    public boolean GrabarIndividual(ActionEvent actionEvent) {
+
+      return IND=true;
+
+    }
+
+    @FXML
+    public boolean GrabarEmpresa(ActionEvent actionEvent) {
+     return EMP=true;
+    }
+
+    public void GrabarParte(ActionEvent actionEvent) {
+        try{
+        String Nombreparte=txtNombreParte.getText();
+        String Marca=txtMarcaParte.getText();
+        String Funcion=txtFuncionParte.getText();
+        String Codigo=txtCodigoParte.getText();
+        int Precio= Integer.parseInt(txtPrecioParte.getText());
+        Producto e=new Producto(1,Nombreparte,Codigo,Marca,Funcion,Precio);
+        Global.Global.IngresoPro(e);
+        }catch(Exception e){
+            System.out.println(e);
+        }
+    }
+
+    public void PaneParteSalir(ActionEvent actionEvent) {
+        PaneIngresoparte.setVisible(false);
+    }
 }
