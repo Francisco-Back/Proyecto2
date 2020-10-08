@@ -141,7 +141,7 @@
             </SplitMenuButton>
          </children>
       </Pane>
-      <Pane fx:id="PaneIngresoProducto" layoutX="9.0" layoutY="45.0" prefHeight="594.0" prefWidth="800.0">
+      <Pane fx:id="PaneIngresoProducto" layoutX="9.0" layoutY="45.0" prefHeight="594.0" prefWidth="800.0" visible="false">
          <children>
             <TextField fx:id="txtNombreParte" layoutX="52.0" layoutY="94.0" promptText="Nombre Parte" />
             <TextField fx:id="txtFuncionParte" layoutX="52.0" layoutY="202.0" promptText="Funcion Parte" />
