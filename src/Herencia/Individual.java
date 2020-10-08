@@ -16,6 +16,7 @@ public class Individual extends Cliente {
     private String Dpi;
     private int Descuento;
     
+    
     public Individual(String Dpi, int Descuento, int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
         super(IdCliente, NombreCliente, Codigo, Empresa, Funcion);
         this.Dpi = Dpi;
