@@ -16,8 +16,8 @@ public class Utileria {
  public String getNombreClase(String Nombreclase){
      return Nombreclase.getClass().getName();
  
-    
  }
+    
  
 
 }
