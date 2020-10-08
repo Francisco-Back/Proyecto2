@@ -39,8 +39,8 @@ public class MenuController implements Initializable {
     public Button Mostrar;
     public Pane Individual;
     public Pane MostrarEmpresa;
-    public Pane PaneIngreso;
-    public Pane PaneIngresoparte;
+    public Pane PaneIngresoCliente;
+    public Pane PaneIngresoProducto;
     public TextField txtNombreCliente;
     public TextField txtContacto;
     public TextField txtEmpresa;
@@ -204,8 +204,8 @@ public class MenuController implements Initializable {
         MostrarEmpresa.setVisible(false);
         PanePartes.setVisible(false);
         PaneCLientes.setVisible(false);
-        PaneIngreso.setVisible(false);
-        PaneIngresoparte.setVisible(false);
+        PaneIngresoCliente.setVisible(false);
+        PaneIngresoProducto.setVisible(false);
 
     }
 
@@ -215,8 +215,8 @@ public class MenuController implements Initializable {
         PanePartes.setVisible(false);
         MostrarEmpresa.setVisible(true);
         PaneCLientes.setVisible(false);
-        PaneIngreso.setVisible(false);
-        PaneIngresoparte.setVisible(false);
+        PaneIngresoCliente.setVisible(false);
+        PaneIngresoProducto.setVisible(false);
     }
 
     @FXML
@@ -225,18 +225,18 @@ public class MenuController implements Initializable {
         PanePartes.setVisible(false);
         MostrarEmpresa.setVisible(false);
         PaneCLientes.setVisible(true);
-        PaneIngreso.setVisible(false);
-        PaneIngresoparte.setVisible(false);
+        PaneIngresoCliente.setVisible(false);
+        PaneIngresoProducto.setVisible(false);
     }
 
     @FXML
     public void IngresoCliente(ActionEvent actionEvent) {
-        PaneIngreso.setVisible(true);
+        PaneIngresoCliente.setVisible(true);
         Individual.setVisible(false);
         PanePartes.setVisible(false);
         MostrarEmpresa.setVisible(false);
         PaneCLientes.setVisible(false);
-        PaneIngresoparte.setVisible(false);
+        PaneIngresoProducto.setVisible(false);
     }
 
     @FXML
@@ -245,26 +245,26 @@ public class MenuController implements Initializable {
         MostrarEmpresa.setVisible(false);
         PanePartes.setVisible(true);
         PaneCLientes.setVisible(false);
-        PaneIngreso.setVisible(false);
-        PaneIngresoparte.setVisible(false);
+        PaneIngresoCliente.setVisible(false);
+        PaneIngresoProducto.setVisible(false);
 
     }
 
     @FXML
     public void Ingresop(ActionEvent actionEvent) {
-       PaneIngresoparte.setVisible(true);
+       PaneIngresoProducto.setVisible(true);
         Individual.setVisible(false);
         MostrarEmpresa.setVisible(false);
         PanePartes.setVisible(false);
         PaneCLientes.setVisible(false);
-        PaneIngreso.setVisible(false);
+        PaneIngresoCliente.setVisible(false);
        
     }
 
     @FXML
     public void PaneIngresosalir(ActionEvent actionEvent) {
 
-        PaneIngreso.setVisible(false);
+        PaneIngresoCliente.setVisible(false);
     }
 
     @FXML
@@ -328,6 +328,6 @@ public class MenuController implements Initializable {
     }
 
     public void PaneParteSalir(ActionEvent actionEvent) {
-        PaneIngresoparte.setVisible(false);
+        PaneIngresoProducto.setVisible(false);
     }
 }
