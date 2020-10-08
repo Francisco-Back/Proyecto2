@@ -33,29 +33,11 @@ import javax.swing.JOptionPane;
  * @author Francisco Back
  */
 public class MenuController implements Initializable {
+
     public Button Mostrar;
     public Pane Individual;
     public Pane MostrarEmpresa;
-    @FXML
-    private TableColumn Descuento;
-    @FXML
-    private TableColumn dpicodigo;
-    @FXML
-    private TableColumn idcliente;
-    @FXML
-    private TableColumn nombre;
-    @FXML
-    private TableColumn codgio;
-    @FXML
-    private TableColumn empres;
-    @FXML
-    private TableColumn funcion;
-    @FXML
-    private TableView tabla;
-    
-    private ObservableList<Cliente> mostrar;
-   
-  
+
     @FXML
     private TableColumn ID;
     @FXML
@@ -71,11 +53,12 @@ public class MenuController implements Initializable {
     @FXML
     private TableView tablaEmpresa;
     @FXML
-    private TableColumn  DESCUEN;
+    private TableColumn DESCUEN;
     private ObservableList<Cliente> Mostraremp;
+
     @FXML
     private Pane PanePartes;
-    
+
     @FXML
     private TableColumn IDP;
     @FXML
@@ -89,134 +72,194 @@ public class MenuController implements Initializable {
     @FXML
     private TableColumn PRECIO;
     private ObservableList<Producto> Catalogo;
-    private ObservableList<Cliente> bucar;
-    @FXML
-    private MenuItem catalogo;
+
     @FXML
     private TableView TablaPartes;
+
     @FXML
-    private Button Buscar;
+    private Pane PaneCLientes;
+
     @FXML
-    private TextField TextoBus;
+    private TableColumn IDCliente;
     @FXML
-    private Button partes;
-    
-    
+    private TableColumn EMPRESACliente;
+    @FXML
+    private TableColumn CONTACTOCliente;
+    @FXML
+    private TableColumn CODIGOCliente;
+    @FXML
+    private TableColumn AREACliente;
+    @FXML
+    private TableColumn FUNCIONcliente;
+    @FXML
+    private TableColumn DESCUENcliente;
+
+    private ObservableList<Cliente> Todos;
+
+    @FXML
+    private TableView tablaEmpresa1;
+    @FXML
+    private TableColumn ID1;
+    @FXML
+    private TableColumn EMPRESA1;
+    @FXML
+    private TableColumn CONTACTO1;
+    @FXML
+    private TableColumn CODIGO1;
+    @FXML
+    private TableColumn AREA1;
+    @FXML
+    private TableColumn FUNCION1;
+    @FXML
+    private TableColumn DESCUEN1;
+
+    @FXML
+    private TableView tablaEmpresaCliente;
+    private ObservableList<Cliente> MostraInd;
 
     /**
      * Initializes the controller clas s.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        mostrar = FXCollections.observableArrayList(DataSistema.Array1());
-        this.dpicodigo.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
-        this.Descuento.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
-        this.idcliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
-        this.nombre.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
-        this.codgio.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
-        this.empres.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
-        this.funcion.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
-        Mostraremp=FXCollections.observableArrayList(DataSistema.Array2());
-        this.EMPRESA.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Dpi"));
-        this.ID.setCellValueFactory(new PropertyValueFactory<Cliente,Integer>("IdCliente"));
-        this.DESCUEN.setCellValueFactory(new PropertyValueFactory<Cliente,Integer>("Descuento"));
-        this.AREA.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Empresa"));
-        this.FUNCION.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Funcion"));
-        this.CONTACTO.setCellValueFactory(new PropertyValueFactory<Cliente,String>("NombreCliente"));
-        this.CODIGO.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Codigo"));
-        Catalogo=FXCollections.observableArrayList(DataSistema.Arrayp1());
-        this.IDP.setCellValueFactory(new PropertyValueFactory<Cliente,Integer>("IdProducto"));
-        this.NPARTE.setCellValueFactory(new PropertyValueFactory<Cliente,String>("NombreParte"));
-        this.PCODIGO.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Codigo"));
-        this.PAMRCA.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Marca"));
-        this.PFUNCION.setCellValueFactory(new PropertyValueFactory<Cliente,String>("Funcion"));
-        this.PRECIO.setCellValueFactory(new PropertyValueFactory<Cliente,Integer>("precio"));
-        
-    }
-    
-    public void initialize(){
+        MostraInd = FXCollections.observableArrayList(DataSistema.Array1());
+        this.EMPRESA1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
+        this.ID1.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
+        this.DESCUEN1.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
+        this.AREA1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
+        this.FUNCION1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
+        this.CONTACTO1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
+        this.CODIGO1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
 
-      
+        Mostraremp = FXCollections.observableArrayList(DataSistema.Array2());
+        this.EMPRESA.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
+        this.ID.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
+        this.DESCUEN.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
+        this.AREA.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
+        this.FUNCION.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
+        this.CONTACTO.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
+        this.CODIGO.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
+        Catalogo = FXCollections.observableArrayList(DataSistema.Arrayp1());
+        this.IDP.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdProducto"));
+        this.NPARTE.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreParte"));
+        this.PCODIGO.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
+        this.PAMRCA.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Marca"));
+        this.PFUNCION.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
+        this.PRECIO.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("precio"));
+        Todos = FXCollections.observableArrayList(DataSistema.Todos());
+        this.EMPRESACliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
+        this.DESCUENcliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
+        this.IDCliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
+        this.CONTACTOCliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
+        this.CODIGOCliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
+        this.AREACliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Empresa"));
+        this.FUNCIONcliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
+
+    }
+
+    public void initialize() {
+
     }
 
     @FXML
     public void Buscar(ActionEvent actionEvent) {
-        String codigo=TextoBus.getText();
-                if(DataSistema.Array1().contains(codigo)){
-                    
-                   this.tabla.setItems(mostrar);
-      }else{
-                    JOptionPane.showMessageDialog(null, "Dato no Encontrado", "error", JOptionPane.ERROR_MESSAGE);
-                    TextoBus.setText("");
-       
-    }}
+        String codigo = "";
+        if (DataSistema.Array1().contains(codigo)) {
+
+            this.tablaEmpresa1.setItems(MostraInd);
+        } else {
+            JOptionPane.showMessageDialog(null, "Dato no Encontrado", "error", JOptionPane.ERROR_MESSAGE);
+
+        }
+    }
+
     @FXML
     public void BuscarEmpresa(ActionEvent actionEvent) {
 
     }
+
     @FXML
     public void Mostrar(ActionEvent actionEvent) {
 
-        this.tabla.setItems(mostrar);
+        this.tablaEmpresa1.setItems(MostraInd);
+
     }
-    
+
     @FXML
-     public void MostrarEmpresa(ActionEvent actionEvent) {
- this.tablaEmpresa.setItems(Mostraremp);
+    public void MostrarEmpresa(ActionEvent actionEvent) {
+        this.tablaEmpresa.setItems(Mostraremp);
     }
-      @FXML
+
+    @FXML
     private void MostrarPartes(ActionEvent actionevent) {
         this.TablaPartes.setItems(Catalogo);
     }
 
+    @FXML
+    private void MostarTodosClientes(ActionEvent event) {
+
+        this.tablaEmpresaCliente.setItems(Todos);
+
+    }
 
     @FXML
     public void verIndividual(ActionEvent actionEvent) {
-       Individual.setVisible(true);
+        Individual.setVisible(true);
         MostrarEmpresa.setVisible(false);
-         PanePartes.setVisible(false);
-    }
-    @FXML
-     public void verempresa(ActionEvent actionEvent) {
-         Individual.setVisible(false);
-          PanePartes.setVisible(false);
-       MostrarEmpresa.setVisible(true);
-    }
-     
-     
-     
-     
-     
-     
-    @FXML
-     public void ingreso(ActionEvent actionEvent) {
-       //empresa.setVisible(true);
-    }
-    @FXML
-     public void catalogo(ActionEvent actionEvent) {
-        Individual.setVisible(false);
-       MostrarEmpresa.setVisible(false);
-       PanePartes.setVisible(true);
-       
-    }
-    @FXML
-     public void Ingresop(ActionEvent actionEvent) {
-       //empresa.setVisible(true);
-       Global.VentanaNew.CreadorWindowsInterno("Compras", "Compras");
-    }
-    @FXML
-     public void OrdCompra(ActionEvent actionEvent) {
-       //empresa.setVisible(true);
-    }
-    @FXML
-     public void IngresoCom(ActionEvent actionEvent) {
-       //empresa.setVisible(true);
+        PanePartes.setVisible(false);
+        PaneCLientes.setVisible(false);
+
     }
 
-   
+    @FXML
+    public void verempresa(ActionEvent actionEvent) {
+        Individual.setVisible(false);
+        PanePartes.setVisible(false);
+        MostrarEmpresa.setVisible(true);
+        PaneCLientes.setVisible(false);
+    }
+
+    @FXML
+    private void VerTodos(ActionEvent event) {
+        Individual.setVisible(false);
+        PanePartes.setVisible(false);
+        MostrarEmpresa.setVisible(false);
+        PaneCLientes.setVisible(true);
+
+    }
+
+    @FXML
+    public void ingreso(ActionEvent actionEvent) {
+        //empresa.setVisible(true);
+    }
+
+    @FXML
+    public void catalogo(ActionEvent actionEvent) {
+        Individual.setVisible(false);
+        MostrarEmpresa.setVisible(false);
+        PanePartes.setVisible(true);
+        PaneCLientes.setVisible(false);
+
+    }
+
+    @FXML
+    public void Ingresop(ActionEvent actionEvent) {
+        //empresa.setVisible(true);
+        Global.VentanaNew.CreadorWindowsInterno("Compras", "Compras");
+    }
+
+    @FXML
+    public void OrdCompra(ActionEvent actionEvent) {
+        //empresa.setVisible(true);
+    }
+
+    @FXML
+    public void IngresoCom(ActionEvent actionEvent) {
+        //empresa.setVisible(true);
+    }
+
     @FXML
     private void BuscarPartes(ActionEvent event) {
     }
 
-    
 }
