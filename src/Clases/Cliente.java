@@ -11,6 +11,7 @@ import java.util.List;
  *
  * @author Francisco Back
  */
+//se crea la clase cliente 
 public class Cliente {
 private static int correlativoCodigo=1;
     private int IdCliente;
@@ -24,7 +25,7 @@ private static int correlativoCodigo=1;
    
 
   
-
+// se crea los metodos constructores
     public Cliente(int IdCliente) {
         this.IdCliente = 0;
     }
@@ -45,7 +46,7 @@ private static int correlativoCodigo=1;
         this.Funcion = Funcion;
     }
 
- 
+ // se cre los metodos get y set
     public String getCliente() {
         return NombreCliente;
     }
@@ -90,6 +91,8 @@ private static int correlativoCodigo=1;
         return IdCliente;
     }
     
+    
+    // se sobre escribe le metodo String 
 
     @Override
     public String toString() {
