@@ -119,7 +119,7 @@
             </TableView>
          </children>
       </Pane>
-      <Pane fx:id="PaneIngresoparte" layoutX="8.0" layoutY="39.0" prefHeight="594.0" prefWidth="800.0" visible="false">
+      <Pane fx:id="PaneIngresoCliente" layoutX="8.0" layoutY="39.0" prefHeight="594.0" prefWidth="800.0" visible="false">
          <children>
             <TextField fx:id="txtNombreCliente" layoutX="52.0" layoutY="95.0" promptText="Nombre o Dpi" />
             <TextField fx:id="txtContacto" layoutX="52.0" layoutY="202.0" promptText="Contacto o Cliente" />
