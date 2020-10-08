@@ -13,13 +13,14 @@ import Clases.Utileria;
  *
  * @author Francisco Back
  */
+// se crea la clase ItemOrden
 public class ItemOrden {
     private int Nolinea;
     private int Cantidad;
     Producto producto;
 
     int aux=1;
-
+// se crea los metodo constructores
     public static int sigIdOrden(int pNolinea,int aux) {
          return aux + pNolinea;
     }
@@ -35,6 +36,7 @@ public class ItemOrden {
        pldproducto=producto.getIdProducto();
     }
 
+    // se crea los  metodos get y set
     public int getNolinea() {
         return Nolinea;
     }
@@ -55,6 +57,7 @@ public class ItemOrden {
         return producto.getPrecio()*Cantidad;
     }
 
+    // se crea el nmetodo toString
     @Override
     public String toString() {
         Utileria utileria=new Utileria();
@@ -65,4 +68,4 @@ public class ItemOrden {
     
     
     
-}
+}//fin de clase
