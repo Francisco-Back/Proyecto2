@@ -11,18 +11,19 @@ import Clases.Cliente;
  *
  * @author Francisco Back
  */
+// se crea la clase Individual que hereda de Cliente
 public class Individual extends Cliente {
-
+// se crea los atributos
     private String Dpi;
     private int Descuento;
     
-    
+    // se crea el metodo constructor
     public Individual(String Dpi, int Descuento, int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
         super(IdCliente, NombreCliente, Codigo, Empresa, Funcion);
         this.Dpi = Dpi;
         this.Descuento = Descuento;
     }
-
+//se crea los metodos get y set
     public Individual( int IdCliente) {
         super(IdCliente);
        
@@ -44,7 +45,7 @@ public class Individual extends Cliente {
     public void setDescuento(int Descuento) {
         this.Descuento = Descuento;
     }
-
+//se crea el metodo toString
     @Override
     public String toString() {
         return  "Individual{" + "Dpi=" + Dpi + ", Descuento=" + Descuento + '}'+super.toString(); 
