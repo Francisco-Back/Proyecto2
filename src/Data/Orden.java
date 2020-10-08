@@ -59,10 +59,8 @@ public class Orden {
         idOrden = pCliente;
     }
 
-    public Orden(int idOrden, int idCliente, String Ncliente, Cliente cliente, ItemOrden item1, ItemOrden item2, Date FechaOrden, double PrecioEnvio, double Total, String Envio, String Estado, int DiasEnvio) {
+    public Orden(int idOrden, Date FechaOrden,  String Envio,  ItemOrden item1, Cliente cliente, ItemOrden item2,  double PrecioEnvio, double Total,String Estado, int DiasEnvio) {
         this.idOrden = idOrden;
-        this.idCliente = idCliente;
-        this.Ncliente = Ncliente;
         this.cliente = cliente;
         this.item1 = item1;
         this.item2 = item2;
@@ -73,6 +71,8 @@ public class Orden {
         this.Estado = Estado;
         this.DiasEnvio = DiasEnvio;
     }
+
+  
     
 
     
