@@ -33,8 +33,11 @@ import javax.swing.JOptionPane;
  * FXML Controller class
  *
  * @author Francisco Back
+ *
  */
+//se crea la clase contralador 
 public class MenuController implements Initializable {
+    //se instancia los atributos que heredan de FXML
 
     public Button Mostrar;
     public Pane Individual;
@@ -136,7 +139,9 @@ public class MenuController implements Initializable {
      * Initializes the controller clas s.
      */
     @Override
+    // se crea la clase de inicia los atributos en un observableArrayList para ver sus atributos en una table wiew
     public void initialize(URL url, ResourceBundle rb) {
+        // se creaun un instacion de este tipo y se le asigna una base de informacion 
         MostraInd = FXCollections.observableArrayList(DataSistema.Array1());
         this.EMPRESA1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
         this.ID1.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
@@ -145,7 +150,7 @@ public class MenuController implements Initializable {
         this.FUNCION1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
         this.CONTACTO1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
         this.CODIGO1.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
-
+        // se creaun un instacion de este tipo y se le asigna una base de informacion 
         Mostraremp = FXCollections.observableArrayList(DataSistema.Array2());
         this.EMPRESA.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
         this.ID.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdCliente"));
@@ -154,6 +159,7 @@ public class MenuController implements Initializable {
         this.FUNCION.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
         this.CONTACTO.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreCliente"));
         this.CODIGO.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Codigo"));
+        // se creaun un instacion de este tipo y se le asigna una base de informacion 
         Catalogo = FXCollections.observableArrayList(DataSistema.Arrayp1());
         this.IDP.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("IdProducto"));
         this.NPARTE.setCellValueFactory(new PropertyValueFactory<Cliente, String>("NombreParte"));
@@ -161,6 +167,7 @@ public class MenuController implements Initializable {
         this.PAMRCA.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Marca"));
         this.PFUNCION.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
         this.PRECIO.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("precio"));
+        // se creaun un instacion de este tipo y se le asigna una base de informacion 
         Todos = FXCollections.observableArrayList(DataSistema.Todos());
         this.EMPRESACliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Dpi"));
         this.DESCUENcliente.setCellValueFactory(new PropertyValueFactory<Cliente, Integer>("Descuento"));
@@ -171,7 +178,7 @@ public class MenuController implements Initializable {
         this.FUNCIONcliente.setCellValueFactory(new PropertyValueFactory<Cliente, String>("Funcion"));
 
     }
-
+// se crea las acciones que se definen con los botones 
     @FXML
     public void Mostrar(ActionEvent actionEvent) {
 
@@ -252,13 +259,13 @@ public class MenuController implements Initializable {
 
     @FXML
     public void Ingresop(ActionEvent actionEvent) {
-       PaneIngresoProducto.setVisible(true);
+        PaneIngresoProducto.setVisible(true);
         Individual.setVisible(false);
         MostrarEmpresa.setVisible(false);
         PanePartes.setVisible(false);
         PaneCLientes.setVisible(false);
         PaneIngresoCliente.setVisible(false);
-       
+
     }
 
     @FXML
@@ -279,20 +286,21 @@ public class MenuController implements Initializable {
 
     @FXML
     public void GrabarCliente(ActionEvent actionEvent) {
-          String Dpi = txtNombreCliente.getText();
+        String Dpi = txtNombreCliente.getText();
         String Empresa = txtEmpresa.getText();
         String Contacto = txtContacto.getText();
         String Codigo = txtCodigo.getText();
         String Funcion = txtFuncion.getText();
-       
+
         if (IND == true) {
-             Individual e = new Individual(Dpi, 5, 1, Contacto, Codigo, Empresa, Funcion);
+            Individual e = new Individual(Dpi, 5, 1, Contacto, Codigo, Empresa, Funcion);
             Global.Global.Ingreso(e);
-        }if(EMP=true){
+        }
+        if (EMP = true) {
             Empresa e = new Empresa(Dpi, 10, 1, Contacto, Codigo, Empresa, Funcion);
-        Global.Global.Ingreso2(e);
-        }else {
-             JOptionPane.showMessageDialog(null, "Infomracion No grabada", "error", JOptionPane.ERROR_MESSAGE);
+            Global.Global.Ingreso2(e);
+        } else {
+            JOptionPane.showMessageDialog(null, "Infomracion No grabada", "error", JOptionPane.ERROR_MESSAGE);
         }
         txtNombreCliente.setText("");
         txtFuncion.setText("");
@@ -304,25 +312,25 @@ public class MenuController implements Initializable {
     @FXML
     public boolean GrabarIndividual(ActionEvent actionEvent) {
 
-      return IND=true;
+        return IND = true;
 
     }
 
     @FXML
     public boolean GrabarEmpresa(ActionEvent actionEvent) {
-     return EMP=true;
+        return EMP = true;
     }
 
     public void GrabarParte(ActionEvent actionEvent) {
-        try{
-        String Nombreparte=txtNombreParte.getText();
-        String Marca=txtMarcaParte.getText();
-        String Funcion=txtFuncionParte.getText();
-        String Codigo=txtCodigoParte.getText();
-        int Precio= Integer.parseInt(txtPrecioParte.getText());
-        Producto e=new Producto(1,Nombreparte,Codigo,Marca,Funcion,Precio);
-        Global.Global.IngresoPro(e);
-        }catch(Exception e){
+        try {
+            String Nombreparte = txtNombreParte.getText();
+            String Marca = txtMarcaParte.getText();
+            String Funcion = txtFuncionParte.getText();
+            String Codigo = txtCodigoParte.getText();
+            int Precio = Integer.parseInt(txtPrecioParte.getText());
+            Producto e = new Producto(1, Nombreparte, Codigo, Marca, Funcion, Precio);
+            Global.Global.IngresoPro(e);
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
