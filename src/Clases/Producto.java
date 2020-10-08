@@ -96,7 +96,7 @@ public class Producto {
     @Override
     public String toString() {
         Utileria utileria = new Utileria();
-        return "[" + utileria.getNombreClase(this.getClass().getSimpleName()) + "]" + "IdProducto=" + IdProducto + ", NombreParte=" + NombreParte + ", Codigo=" + Codigo + ", Marca=" + Marca + ", Funcion=" + Funcion + ", aux=" + aux + ",Precio" + precio;
+        return "[" + utileria.getNombreClase(this.getClass().getSimpleName()) + "]" + "IdProducto=" + IdProducto + ", NombreParte=" + NombreParte + ", Codigo=" + Codigo + ", Marca=" + Marca + ", Funcion=" + Funcion  + ",Precio" + precio;
     }
 
 }
