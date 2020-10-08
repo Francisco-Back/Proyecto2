@@ -16,10 +16,12 @@ import java.util.ArrayList;
 /**
  *
  * @author Francisco Back
+ * 
  */
+// se crea la clase DataSistema 
 public class DataSistema {
   
-    
+    // se crea los arraylist de tipo stactic y se retorna su valor
     public static ArrayList<Cliente> Array1(){
           ArrayList<Cliente> Arrcliente = new ArrayList<>();
         Arrcliente.add(new Individual("2548794565845",5,1,"Francisco Back","5645","Acabados","Compras"));
@@ -30,7 +32,7 @@ public class DataSistema {
         
         return Arrcliente;
     }
- 
+  // se crea los arraylist de tipo stactic y se retorna su valor
     
      public static ArrayList<Cliente> Array2(){
           ArrayList<Cliente> Arrcliente = new ArrayList<>();
@@ -40,7 +42,7 @@ public class DataSistema {
         Arrcliente.add(new Empresa("Proyection Shock Guatemala",10,1,"Marcos Lopez","1247","Envio","Compras"));
         return Arrcliente;
     }
-      
+       // se crea los arraylist de tipo stactic y se retorna su valor
          
 
 public static ArrayList<Producto> Arrayp1(){
@@ -57,6 +59,7 @@ public static ArrayList<Producto> Arrayp1(){
         return Arrproducto;
 
 }
+ // se crea los arraylist de tipo stactic y se retorna su valor
      public static ArrayList<Cliente> Todos(){
           ArrayList<Cliente> Todos = new ArrayList<>();
      Todos.addAll(DataSistema.Array1());
