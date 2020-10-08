@@ -9,7 +9,9 @@ package Clases;
  *
  * @author Francisco Back
  */
+//se crea la clase producto
 public class Producto {
+    // se crea los atributos
 
     public static int correlativoCodigo = 2000;
     private int IdProducto;
@@ -19,7 +21,7 @@ public class Producto {
     private String Funcion;
     private int precio;
 
-    int aux = 2000;
+    // se instancian los metodos constructores   
 
     public Producto(int IdProducto) {
         this.IdProducto = 0;
@@ -42,7 +44,7 @@ public class Producto {
         this.Funcion = Funcion;
         this.precio = precio;
     }
-
+// se crean lso metodos get y set de la clase
     public int getIdProducto() {
         return IdProducto;
     }
@@ -90,7 +92,7 @@ public class Producto {
     public void setPrecio(int precio) {
         this.precio = precio;
     }
-
+// se sobreescribe el metodo toString
     @Override
     public String toString() {
         Utileria utileria = new Utileria();
