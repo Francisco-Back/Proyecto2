@@ -6,8 +6,9 @@
 package Global;
 
 import Clases.Cliente;
+import Clases.Producto;
 import Data.DataSistema;
-import javafx.scene.control.cell.PropertyValueFactory;
+
 
 /**
  *
@@ -16,9 +17,19 @@ import javafx.scene.control.cell.PropertyValueFactory;
 public class Global {
     
     
-       public static void ingreso(Cliente e){
+       public static void Ingreso(Cliente e){
              
           DataSistema.Array1().add(e);
+          
+    }
+        public static void Ingreso2(Cliente e){
+             
+          DataSistema.Array2().add(e);
+          
+    }
+        public static void IngresoPro(Producto e){
+             
+          DataSistema.Arrayp1().add(e);
           
     }
 
