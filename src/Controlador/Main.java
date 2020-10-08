@@ -20,9 +20,10 @@ import javafx.stage.Stage;
 
 
 
- 
+ // se crea le metodo main que da vida al programa
 public class Main extends Application {
 
+    // se hereda de application y se crea un instancia de tipo scene 
   @Override
     public void start(Stage stage) throws Exception {
         
@@ -36,13 +37,9 @@ public class Main extends Application {
          
          stage.show();
          
-      /*  Parent root = FXMLLoader.load(getClass().getResource("/Ventanas/WindowsLogin.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        stage.setScene(scene);
-        stage.show();*/
+     
     }
+    // se crea el lanzado de la ventana
  
     public static void main(String[] args) {
         launch(args);
