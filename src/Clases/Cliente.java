@@ -15,7 +15,7 @@ public class Cliente {
 private static int correlativoCodigo=1;
     private int IdCliente;
     private String NombreCliente;
-    private String Codigo;
+    public String Codigo;
     private String Empresa;
     private String Funcion;
     //private List<Cliente>cliente;
