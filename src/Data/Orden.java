@@ -15,7 +15,9 @@ import Data.DataSistema;
  *
  * @author Francisco Back
  */
+// se crea la clase orden 
 public class Orden {
+    // se definen sus atributos
 
     private static int correlativo = 1;
     private int idOrden;
@@ -31,6 +33,8 @@ public class Orden {
     private String Estado;
     static int sigldOrden;
     private int DiasEnvio;
+    
+    // se crea los metodos constructores
 
     public Orden(int idOrden) {
 
@@ -76,13 +80,13 @@ public class Orden {
     
 
     
-
+// no se crea los metodos get y set
  
     
 
 
 
-
+//se crea el metodo toSring
     @Override
     public String toString() {
         return "Orden{" + "idOrden=" + idOrden + ", cliente=" + cliente + ", item1=" + item1 + ", item2=" + item2 + ", FechaOrden=" + FechaOrden + ", PrecioEnvio=" + PrecioEnvio + ", Total=" + Total + ", Envio=" + Envio + ", Estado=" + Estado + ", DiasEnvio=" + DiasEnvio + '}';
