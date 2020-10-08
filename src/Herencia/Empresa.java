@@ -10,16 +10,19 @@ import Clases.Cliente;
 /**
  *
  * @author Francisco Back
+ * 
  */
+// se crea la clase empresa que hereda de Cliente
 public class Empresa extends Cliente{
     private String Dpi;
     private int Descuento;
-
+// se crea el metodo constructor con los atibutos de la clase super
         public Empresa(String Dpi, int Descuento, int IdCliente, String NombreCliente, String Codigo, String Empresa, String Funcion) {
         super(IdCliente, NombreCliente, Codigo, Empresa, Funcion);
         this.Dpi = Dpi;
         this.Descuento = Descuento;
     }
+        // se crea lso metodos get y set
 
     public String getDpi() {
         return Dpi;
@@ -37,7 +40,7 @@ public class Empresa extends Cliente{
         this.Descuento = Descuento;
     }
 
-
+//se crea el metodo toString
 
     @Override
     public String toString() {
